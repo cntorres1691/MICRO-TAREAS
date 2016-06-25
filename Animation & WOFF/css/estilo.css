@@ -1,0 +1,29 @@
+p { 
+width: 80px;
+height: 80px;
+-webkit-animation-name: MiAnimacion; /* Chrome, Safari, Opera */
+-webkit-animation-duration: 6s; /* Chrome, Safari, Opera */
+animation-duration: 6s;
+animation-iteration-count: infinite;
+animation-name: MiAnimacion;
+animation-direction: alternate;
+animation-timing-function: ease-out;
+}
+
+@-moz-keyframes MiAnimacion {
+from {font-size:0%;
+	margin-left:100%;}
+50% {font-size:400%;}
+to {font-size:400%;
+	margin-left:20%;
+	width:100%;}
+}
+@-webkit-keyframes MiAnimacion {
+from {font-size:0%;
+	margin-left:100%;}
+50% {font-size:400%;}
+to {font-size:400%;
+	margin-left:20%;
+	width:100%;}
+}
+

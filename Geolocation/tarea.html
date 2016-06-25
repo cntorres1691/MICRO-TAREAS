@@ -1,0 +1,42 @@
+
+<!doctype html>
+<html>      
+  <head>
+    <title>Geolocation</title>
+    <script type="text/javascript">
+        
+        function init() {
+        
+          if (navigator.geolocation) {
+            document.getElementById("myLocation").innerHTML = "Listo para recibir detalles de tu localizacion.";
+            var geo = navigator.geolocation;
+            geo.getCurrentPosition(showLocation, showError);
+          }
+          else {
+            document.getElementById("myLocation").innerHTML = "Geolocation no soportado en este browser.";
+            
+          }
+
+        }      
+
+        function showLocation(position) {
+          var lng = position.coords.longitude;
+          var lat = position.coords.latitude;
+          document.getElementById("myLocation").innerHTML = "Latitud: " + lat + ", Longitud: " + lng;
+        }
+        
+        function showError(error) { 
+          alert("There has been an error");
+        }
+    </script>
+  </head>
+  <body onload="init();">
+
+    <h1>Tu localizacion es:</h1>
+      
+    <p id="myLocation"></p>
+  
+  </body>
+
+</html>
+    
